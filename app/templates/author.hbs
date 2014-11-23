@@ -1,0 +1,15 @@
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-xs-12">
+      <p {{bind-attr style=authorName}} class="h2">{{model.id}}
+        <span {{bind-attr style=joinedDate}} class="small">
+          joined {{human-date model.createDate}}
+        </span>
+      </p>
+      <p {{bind-attr style=authorTitle}} class="h3">{{model.title}}</p>
+      <p>{{model.about}}</p>
+    </div>
+  </div>
+  
+</div> <!-- container -->

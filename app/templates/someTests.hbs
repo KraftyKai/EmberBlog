@@ -1,0 +1,55 @@
+<div class="container-fluid index-page">
+  <div class="row">
+    
+    <div class="col-xs-6 col-md-3 center-block" {{bind-attr style=selectionBox}}>
+
+      <div class="row">
+      
+        <div class="col-xs-6">
+          <div class="row text-center">
+            <div {{bind-attr style=selectFlavorTopLeft}}>
+              <p>Technical</p>
+              {{#circle-selector css=selectionCircle class="col-xs-7 center-block"}}
+              <img {{bind-attr src=technicalSelectorImg}} {{bind-attr style=imgStyle}}>
+              {{/circle-selector}}
+            </div>
+          </div> <!-- row -->
+        </div>
+
+        <div class="col-xs-6">
+          <div class="row text-center">
+            <div {{bind-attr style=selectFlavorTopRight}}>
+              {{#circle-selector css=selectionCircle class="col-xs-7 center-block"}}
+              <img {{bind-attr src=businessSelectorImg}} {{bind-attr style=imgStyle}}>
+              {{/circle-selector}}
+            </div>
+          </div> <!-- row -->
+        </div>
+
+      </div> <!-- row -->
+      <div class="row">
+        
+        <div class="col-xs-6">
+          <div class="row text-center">
+            <div {{bind-attr style=selectFlavorBottomLeft}}>
+              {{#circle-selector css=selectionCircle class="col-xs-7 center-block"}}
+              <img {{bind-attr src=politicsSelectorImg}} {{bind-attr style=imgStyle}}>
+              {{/circle-selector}}
+            </div>
+          </div> <!-- row -->
+        </div>
+
+        <div class="col-xs-6">
+          <div class="row text-center">
+            <div {{bind-attr style=selectFlavorBottomLeft}}>
+              {{#circle-selector css=selectionCircle class="col-xs-7 center-block"}}
+              <img {{bind-attr src=everythingSelectorImg}} {{bind-attr style=imgStyle}}>
+              {{/circle-selector}}
+            </div>
+          </div> <!-- row -->
+        </div>
+        
+      </div> <!-- row -->
+    </div>
+  </div>
+</div>

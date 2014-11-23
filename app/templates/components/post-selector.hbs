@@ -1,0 +1,20 @@
+{{#link-to 'post' post.id}}
+<div class="row">
+  <div class="col-xs-12">
+    <p>{{post.captionTitle}}</p>
+    <p {{bind-attr style=title}} class="h3">{{post.title}}</p>
+    <p>{{post.subheading}}</p>
+    <p class="small">by
+      {{#link-to 'author' 'kraftykai'}}
+          <span class="linkify">{{post.author.id}}</span>
+      {{/link-to}}
+      <span class="fa fa-circle" {{bind-attr style=bulletPoint}}></span>
+      {{human-date post.publishDate}}
+    </p>
+  </div>
+
+</div> <!-- row -->
+{{/link-to}}
+{{divider-line-bottom}}
+
+<br />

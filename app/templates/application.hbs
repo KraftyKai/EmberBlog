@@ -1,3 +1,23 @@
-<h2 id='title'>Welcome to Ember.js</h2>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      {{#link-to 'posts' class="navbar-brand no-top-padding"}}
+        <p class="h2 no-margins"><span class="label label-default">PGREP.org</span></p>
+      {{/link-to}}
+    </div>
+    {{#if isLoggedIn}}
+      
+      {{#link-to 'posts/new' class="navbar-text navbar-right navbar-link"}}
+        <span class="fa fa-pencil-square-o"></span>
+      {{/link-to}}
+      
+    {{else}}
+      
+    {{/if}}
+    
+  </div> <!-- container -->
+</nav>
 
-{{outlet}}
+<div class="main-body">
+  {{outlet}}
+</div>

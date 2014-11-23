@@ -17,4 +17,43 @@ var app = new EmberApp();
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
 
+//Import bootstrap and bootstrap assets
+app.import('vendor/bootstrap/js/bootstrap.min.js');
+app.import('vendor/bootstrap/css/bootstrap.min.css');
+app.import('vendor/bootstrap/css/bootstrap.css.map');
+
+app.import('vendor/bootstrap/fonts/glyphicons-halflings-regular.eot');
+app.import('vendor/bootstrap/fonts/glyphicons-halflings-regular.svg');
+app.import('vendor/bootstrap/fonts/glyphicons-halflings-regular.ttf');
+app.import('vendor/bootstrap/fonts/glyphicons-halflings-regular.woff');
+
+//Import font-awesome and font-awesome assets
+app.import('bower_components/fontawesome/css/font-awesome.min.css');
+
+app.import('bower_components/fontawesome/fonts/FontAwesome.otf', {
+    destDir: 'fonts/'});
+app.import('bower_components/fontawesome/fonts/fontawesome-webfont.eot', {
+    destDir: 'fonts/'});
+app.import('bower_components/fontawesome/fonts/fontawesome-webfont.svg', {
+    destDir: 'fonts/'});
+app.import('bower_components/fontawesome/fonts/fontawesome-webfont.ttf', {
+    destDir: 'fonts/'});
+app.import('bower_components/fontawesome/fonts/fontawesome-webfont.woff', {
+    destDir: 'fonts/'});
+
+//Import momentjs
+app.import('bower_components/moment/moment.js');
+
+//Import asset images
+app.import('vendor/images/technical-tux.png',{
+    destDir: 'assets/images/'});
+app.import('vendor/images/business-tux.png', {
+    destDir: 'assets/images/'});
+app.import('vendor/images/politics-tux.png', {
+    destDir: 'assets/images/'});
+app.import('vendor/images/everything-tux.png', {
+    destDir: 'assets/images/'});
+app.import('vendor/images/business-tux-bg.jpg', {
+    destDir: 'assets/images/'});
+
 module.exports = app.toTree();

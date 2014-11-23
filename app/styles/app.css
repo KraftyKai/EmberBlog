@@ -1,3 +1,87 @@
 html, body {
-  margin: 20px;
+  height: 100%;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: inherit;
+    text-decoration: inherit;
+    font-weight: inherit;
+}
+
+.container{
+    max-width: none !important;
+    width: 970px;
+}
+
+.ember-application .ember-app {
+    height: 100%;
+}
+
+.main-body {
+    padding-top: 70px;
+}
+
+.no-margins{
+    margin: 0;
+}
+
+.no-top-margin{
+    margin-top: 0;
+}
+
+.no-padding{
+    padding: 0;
+}
+
+.no-top-padding{
+    padding-top: 0;
+}
+
+.cursorify{
+    cursor: pointer;
+}
+
+.bottom-row {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    background-color: white;
+    z-index: 10;
+    padding-top: 10px;
+}
+
+.scrollable {
+    overflow: auto;
+}
+
+/* Navbar brand label positioning fix */
+.navbar-brand > p {
+  margin-top: 5px;
+}
+
+.navbar-link > span {
+    font-size: 1.7em;
+}
+
+
+/* !!! index.hbs template !!! */
+.index-page {
+  margin-top: 100px;
+}
+
+.center-block {
+    float: none;
+}
+
+.vertical-center {
+    display: flex;
+    align-items: center;
+}
+
+.linkify {
+    color: #0000ee;
 }

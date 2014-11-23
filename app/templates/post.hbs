@@ -1,0 +1,92 @@
+<div class="container-fluid">
+  
+  <div class="row">
+    <div class="col-xs-12 scrollable">
+
+      {{#if isLoggedIn}}
+        {{#unless isEditing}}
+          <button type="button" class="btn btn-default" {{action 'editPost'}}>
+            Edit Post
+          </button>
+        {{/unless}}
+      {{/if}}
+      
+      {{#if confirmingExit}}
+        <div class="alert alert-danger cursorify" role="alert" {{action 'forceTransition'}}>
+          <strong>You made changes but didn't save your work!</strong>
+          If you want to discard changes and proceed, <strong>select
+          this warning.</strong> 
+        </div>
+      {{/if}}
+      
+      <p class="h2">{{model.title}}</p>
+      {{#if isEditing}}
+        <div {{bind-attr class=":form-group missing.title:has-error"}}>
+          {{#if missing.title}}
+            <label class="control-label" for="title">Title must be provided!</label>
+          {{/if}}
+          {{input type="text" class="form-control" placeholder="Title" value=model.title}}
+        </div>
+      {{/if}}
+      <p class="h3">{{model.subheading}}</p>
+      {{#if isEditing}}
+        
+        {{input type="text" class="form-control" placeholder="Subheading" value=model.subheading}}
+        
+        <br /> {{!-- Example formatting only.  TODO: FIX! (styling) --}}
+        <div {{bind-attr class=":form-group missing.content:has-error"}}>
+          {{#if missing.content}}
+            <label class="control-label" for="content">Missing Post Content!</label>
+          {{/if}}
+          {{textarea class="form-control" rows="10" placeholder="Enter some content!" value=model.content}}
+        </div>
+        <br /> {{!-- Example formatting only.  TODO: FIX! (styling) --}}
+      {{/if}}
+      <p>{{model.content}}</p>
+      
+      <p class="small">by
+        {{#link-to 'author' model.author}}
+            <span class="linkify">{{model.author.id}}</span>
+        {{/link-to}}
+        , penned {{human-date model.publishDate}}</p>
+    </div>
+  </div> <!-- row -->
+
+  
+
+  {{#if isLoggedIn}}
+    {{#if isEditing}}
+      <button id="cancelbtn" type="button" class="btn btn-default" {{action 'cancelChanges'}}>
+        Cancel
+      </button>
+      <button id="savebtn" type="button" class="btn btn-default" {{action 'saveChanges'}}>
+        Save
+      </button>
+    {{else}}
+      <button id="editpostbtn" type="button" class="btn btn-default" {{action 'editPost'}}>
+        Edit Post
+      </button>
+    {{/if}}
+  {{/if}}
+
+  
+  
+  <div class="row bottom-row">
+    <div class="col-xs-12">
+      {{#if prevPost}}
+        <button id="prevPost" type="button" class="btn btn-default pull-left" {{action 'goPrevPost'}}>
+          Previous
+        </button>
+      {{/if}}
+      {{#if nextPost}}
+        <button id="prevPost" type="button" class="btn btn-default pull-right" {{action 'goNextPost'}}>
+          Next
+        </button>
+      {{/if}}
+    </div>
+  </div>
+  </div>
+  
+  
+  
+</div> <!-- container -->

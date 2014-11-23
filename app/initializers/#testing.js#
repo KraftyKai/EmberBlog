@@ -1,0 +1,10 @@
+export function initialize(/* container, application */) {
+  // application.inject('route', 'foo', 'service:foo');
+};
+
+export default {
+  name: 'testing',
+  initialize: function(container, application) {
+      var control = function(controller, model) {
+	  this._super(controller, 
+      }
