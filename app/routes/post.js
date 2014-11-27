@@ -1,22 +1,21 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-    setupController: function (controller, model) {
-	this._super(controller,model);
+/*    setupController: function (controller, model) {
+	this._super(controller,model); */
+
+    afterModel: function(model, transition) {
+	this._super(model, transition);
 	if (model.get('partial')) {
 	    if (model.get('isDirty')) {
 		model.rollback();
 		console.log("Discarded unexpected changes.");
 	    }
 	    model.reload();
-	    controller.set('model', model);
 	}
-	
-	controller.send('getSisterPosts');
-	
     },
 
-    resetController: function (controller, isExiting, transition) {
+    resetController: function (controller  /*isExiting, transition*/) {
 	controller.send('resetController');
     },
 
