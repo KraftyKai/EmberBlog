@@ -47,11 +47,12 @@ a:active {
 
 .bottom-row {
     position: fixed;
-    bottom: 10px;
+    bottom: 0px;
     width: 100%;
     background-color: white;
     z-index: 10;
     padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .scrollable {
@@ -84,4 +85,9 @@ a:active {
 
 .linkify {
     color: #0000ee;
+}
+
+/* post.hbs template */
+.bottom-pad {
+    padding-bottom: 70px;
 }

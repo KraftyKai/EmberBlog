@@ -33,7 +33,7 @@ export default Ember.ObjectController.extend({
 		return;
 	    }
 
-	    this.get('model').save().then(function(post) {
+	    this.get('model').save().then(function(/*post*/) {
 		console.log("Save Successful");
 	    }, function(reason) {
 		console.log("Failed");
@@ -62,7 +62,6 @@ export default Ember.ObjectController.extend({
 
 	getSisterPosts: function() {
 	    var self = this;
-	    var nextIndex = null;
 	    this.store.find('post').then( function(posts) {
 
 		posts.content = posts.content.sortBy('publishDate');

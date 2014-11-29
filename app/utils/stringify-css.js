@@ -1,6 +1,8 @@
-/* Global $ */
+/* global $ */
+/*jshint unused: false*/
 
 //NOTE: This object currently maintains on state
+
 
 export default function stringifyCss(css) {
     var result = "";

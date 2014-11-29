@@ -1,8 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-/*    setupController: function (controller, model) {
-	this._super(controller,model); */
 
     afterModel: function(model, transition) {
 	this._super(model, transition);
@@ -13,6 +11,11 @@ export default Ember.Route.extend({
 	    }
 	    model.reload();
 	}
+    },
+
+    setupController: function(controller, model) {
+	this._super(controller, model);
+	controller.send('getSisterPosts');
     },
 
     resetController: function (controller  /*isExiting, transition*/) {

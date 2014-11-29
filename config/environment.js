@@ -44,9 +44,11 @@ module.exports = function(environment) {
   }
 
   ENV.contentSecurityPolicy = {
+      //TODO: Secure the whitelists
       'connect-src': "'self' ws://*",
-      'style-src': "'self' 'unsafe-inline'",
-      'script-src': "'self' 'unsafe-eval' *"
+      'style-src': "'self' 'unsafe-inline' http://*",
+      'script-src': "'self' 'unsafe-eval' * http://cdnjs.cloudfare.com/*",
+      'img-src': "'self'"  //Do not fix data:image/png:base64,... error
   }
 
   return ENV;

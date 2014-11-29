@@ -13,7 +13,7 @@ export default Ember.Route.extend({
 
     controllerName: 'new-post',
 
-    resetController: function (controller, isExiting, transition) {
+    resetController: function (controller /*isExiting, transition*/) {
 	controller.send('resetController');
     },
 
@@ -32,7 +32,7 @@ export default Ember.Route.extend({
 	    for(var item in model) {
 		console.log("item");
 		console.log(item);
-		if (model[item] == '' || item == 'publishDate' || item == 'author') {
+		if (model[item] === '' || item === 'publishDate' || item === 'author') {
 		    continue;
 		}
 		console.log("Detected change");

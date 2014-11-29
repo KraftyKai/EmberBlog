@@ -38,11 +38,16 @@
           {{#if missing.content}}
             <label class="control-label" for="content">Missing Post Content!</label>
           {{/if}}
-          {{textarea class="form-control" rows="10" placeholder="Enter some content!" value=model.content}}
+          {{!--<div id="contentEditor"></div>--}}
+          {{#wysiwyg-editor content=model.content}}
+            
+          {{/wysiwyg-editor}}
+            
         </div>
+      {{else}}
         <br /> {{!-- Example formatting only.  TODO: FIX! (styling) --}}
+        {{markup-text model.content}}
       {{/if}}
-      <p>{{model.content}}</p>
       
       <p class="small">by
         {{#link-to 'author' model.author}}
@@ -68,6 +73,7 @@
       </button>
     {{/if}}
   {{/if}}
+  <div class="bottom-pad"></div>
 
   
   
@@ -79,7 +85,7 @@
         </button>
       {{/if}}
       {{#if nextPost}}
-        <button id="prevPost" type="button" class="btn btn-default pull-right" {{action 'goNextPost'}}>
+        <button id="nextPost" type="button" class="btn btn-default pull-right" {{action 'goNextPost'}}>
           Next
         </button>
       {{/if}}

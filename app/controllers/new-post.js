@@ -37,7 +37,7 @@ export default Ember.ObjectController.extend({
 
     actions: {
 	saveChanges: function() {
-	    self = this;
+	    var self = this;
 
 	    //Validate form
 	    this.set('missing.title', false);
@@ -65,7 +65,7 @@ export default Ember.ObjectController.extend({
 
 	cancelChanges: function() {
 	    this.send('resetController');
-	    this.transitionToRoute('/posts')
+	    this.transitionToRoute('/posts');
 	   
 	},
 

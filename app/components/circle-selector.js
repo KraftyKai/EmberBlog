@@ -1,4 +1,5 @@
 import Ember from 'ember';
+/* global $, jQuery */
 
 export default Ember.Component.extend({
 
@@ -18,8 +19,6 @@ export default Ember.Component.extend({
     },
 
     styles: {
-	//'background-color': 'pink',
-	//'color': 'blue',
 	'border-radius': '50%'
     },
    
@@ -35,11 +34,7 @@ export default Ember.Component.extend({
 	console.log(result);
 
 	return result;
-    }.property('styles'),
-
-    actions: {
-	updateStyles: function(new_styles) {
-	    
-	}
-    }
+    }.property('styles')
+	
+    
 });

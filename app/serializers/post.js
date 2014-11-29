@@ -5,7 +5,10 @@ export default DS.RESTSerializer.extend({
     normalizePayload: function(payload) {
 	if (payload.hasOwnProperty('posts')) {
 	    $.each(payload.posts, function(key, value) {
-		payload.authors = [{id: value.author}];
+		payload.authors = [{
+		    id: value.author,
+		    partial: true
+		}];
 	    });
 	} else if (payload.hasOwnProperty('post')) {
 	    payload.authors = [{
