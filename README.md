@@ -52,14 +52,18 @@ I've included these in an attempt to help those less familiar with some of the d
     * *Note: What we're doing here is solving a lot of potential permission issues without sacrificing as much system integrety.  You're environmental needs may be different.  I've found a few places that seem to recommend changing the /usr/local or /usr/local/bin permission set.  I'd not recommend doing that*.
     
 4. Add the new NPM global prefix to your user PATH variable `echo "PATH=\"\$PATH:\$HOME/.npm/bin:\$(npm bin)\"" >> ~/.profile`.
-    * **CAUTION:** Make sure you typed this command in correctly.  You can double check by opening your ~/.profile file and making sure that the very last line reads: `PATH="$PATH:$HOME/.npm/bin:$(npm bin)"`.  Getting this wrong could clear your PATH variable and leave your system commands disabled.
+    * **CAUTION:** Make sure you typed this command in correctly.  You can double check by opening your ~/.profile file and making sure that the very last line reads: `PATH="$PATH:$HOME/.npm/bin"`.  Getting this wrong could clear your PATH variable and leave your system commands disabled.
+    
+5. You have a choice here.  You can either install ember-cli globally or just use it as a local node module.  Depending on which you choose...
+    * If using ember-cli globally you want to `npm install -g ember-cli`.  **DO NOT USE SUDO!**
+    * If using ember-cli locally create a permanent alias to use the local ember installation `alias ember="\$(npm bin)/ember"`.  Name the alias as you see fit, just remember it's your equivalent of the `ember` command from here on.
 
-5. Reload your profile `source ~/.profile`.
+6. Reload your profile `source ~/.profile`.
  
-6. Install Bower globally via npm `npm install -g bower`.
+7. Install Bower globally via npm `npm install -g bower`.
     * Notice that we did **not** use sudo.
 
-7. Clone and Install the ember app as listed above in **Installation**.
+8. Clone and Install the ember app as listed above in **Installation**.
     * `cd <desired_installation_directory` (EG, `cd ~` to go to your $HOME directory)
     * `git clone http://github.com/KraftyKai/EmberBlog`
     * `cd EmberBlog`
