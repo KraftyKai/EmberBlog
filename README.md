@@ -68,7 +68,7 @@ I've included these in an attempt to help those less familiar with some of the d
     
 6. You have a choice here.  You can either install ember-cli globally or just use it as a local node module.  Depending on which you choose...
 
-    * (**RECOMMENDED**) If using ember-cli locally create a permanent alias to use the local ember installation.  In this case I'll be naming the alias **ember**, but you can name the alias as you see fit.  There's a legitimate case to be made for specfically NOT naming it ember.  Just remember - whatever you name this alias - it's your equivalent of the `ember` command from here on.  You will not need to install ember-cli manually.
+    * (**RECOMMENDED**) If using ember-cli locally create a permanent alias to use the local ember installation.  In this case I'll be naming the alias **ember**, but you can name the alias as you see fit.  There's a legitimate case to be made for specifically NOT naming it ember.  Just remember - whatever you name this alias - it's your equivalent of the `ember` command from here on.  You will not need to install ember-cli manually.
         * `echo "alias ember=\"\\\$(npm bin)/ember\"" >> ~/.profile && source ~/.profile`
         
     * (**Alternative**) If you'd like to install ember-cli globally that's fine too!  **DO NOT USE SUDO!**
