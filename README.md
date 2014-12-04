@@ -56,7 +56,7 @@ I've included these in an attempt to help those less familiar with some of the d
 2. Install necessary system dependencies:
     * `sudo apt-get install nodejs-legacy npm git`
 
-3. Alter the NPM global install path prefix.  Doing so will solve a lot of potential permission issues without sacrificing as much system integrity as other solutions I've found.  You're environmental needs may of course be different - though caution is advised.  I would not change the permissions of my /usr/local or /usr/local/bin folder as some forums have advised.
+3. Alter the NPM global install path prefix.  Doing so will solve a lot of potential permission issues without sacrificing as much system integrity as other solutions I've found.  Your environmental needs may of course be different - though caution is advised.  I would not change the permissions of my /usr/local or /usr/local/bin folder as some forums have advised.
     * `npm config set prefix ~/.npm`
     
 4. Add the new NPM global prefix to your user PATH variable 
