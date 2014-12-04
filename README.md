@@ -72,7 +72,7 @@ I've included these in an attempt to help those less familiar with some of the d
     * `npm install -g bower`.
 
 8. Clone and Install the ember app as listed above in **Installation**.
-    * `cd <desired_installation_directory` (EG, `cd ~` to go to your $HOME directory)
+    * `cd <desired_installation_directory>` (EG, `cd ~` to go to your $HOME directory)
     * `git clone http://github.com/KraftyKai/EmberBlog`
     * `cd EmberBlog`
     * `npm install` 
