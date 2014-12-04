@@ -51,7 +51,7 @@ I've included these in an attempt to help those less familiar with some of the d
 3. Alter the NPM global install location `npm config set prefix ~/.npm`.
     * *Note: What we're doing here is solving a lot of potential permission issues without sacrificing as much system integrety.  You're environmental needs may be different.  I've found a few places that seem to recommend changing the /usr/local or /usr/local/bin permission set.  I'd not recommend doing that*.
     
-4. Add the new NPM global prefix to your user PATH variable `echo "PATH=\"\$PATH:\$HOME/.npm/bin:\$(npm bin)\"" >> ~/.profile`.
+4. Add the new NPM global prefix to your user PATH variable `echo "PATH=\"\$PATH:\$HOME/.npm/bin\"" >> ~/.profile`.
     * **CAUTION:** Make sure you typed this command in correctly.  You can double check by opening your ~/.profile file and making sure that the very last line reads: `PATH="$PATH:$HOME/.npm/bin"`.  Getting this wrong could clear your PATH variable and leave your system commands disabled.
     
 5. You have a choice here.  You can either install ember-cli globally or just use it as a local node module.  Depending on which you choose...
