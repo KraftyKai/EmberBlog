@@ -45,11 +45,11 @@ app.import('bower_components/fontawesome/fonts/fontawesome-webfont.woff', {
 app.import('bower_components/moment/moment.js');
 
 //Import CodeMirror - import BEFORE summernote (or as AMD asset)
-app.import('bower_components/codemirror/wtf/codemirror.min.css');  
-app.import('bower_components/codemirror/wtf/codemirror.min.js');
-app.import('bower_components/codemirror/wtf/formatting.min.js');
-app.import('bower_components/codemirror/wtf/monokai.min.css');
-app.import('bower_components/codemirror/wtf/xml.min.js');
+app.import('vendor/codemirror/codemirror.min.css');
+app.import('vendor/codemirror/codemirror.min.js');
+app.import('vendor/codemirror/formatting.min.js');
+app.import('vendor/codemirror/monokai.min.css');
+app.import('vendor/codemirror/xml.min.js');
 
 //Import summernote
 app.import('bower_components/summernote/dist/summernote.min.js');
