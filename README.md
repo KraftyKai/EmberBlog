@@ -1,8 +1,14 @@
-# Krafty-kai
+# EmberBlog
 
-This README outlines the details of collaborating on this Ember application.
+A light weight ember blog application used to explore and in some cases highlight some of the functionality and capabilities of ember (more specifically: ember-cli).  This particular application is built using an extended set of tools to build a remarkably ambitious app considering the short amount of time put into it.  The goal here is to dive just a little deeper than a basic tutorial and provide some code to get the juices flowing.
 
-A short introduction of this app could easily go here.
+The Master Branch will continue to evolve (I do have some intent to make use of and embellish on this some).  The Example branch is here to serve as a general reference and will no longer be updated.  It is there specifically to serve as a reference for beginning ember users.
+
+As it stands right now, and as it will always be in the case of the "Example" branch, some parts are only partially integrated - such as uploading a picture in the WYSIWYG editor.  The deployment comes complete with a test server to actively utilize ember data against.   If you're here to get a feel for how ember handles interactions with REST API's I'd highly recommend utilizing Tamper Data or Wireshark to correlate interactions against the code.
+
+At some point I'll write a more thorough guide to highlight some of the finer and possibly less obvious elements of the code.
+
+The actual ember app source is within the `/app` directory.  The test server code can be found in the `/server/mocks/` directory.  Lastly, the `dist` folder contains the client files in static form.  In a production type setting, this would be where you would find the necessary code to put in your server for your single page webapp (or where to pont your CI to as the files it cares about monitoring within your git repo). 
 
 ## Prerequisites
 
